@@ -9,6 +9,17 @@ let getALl = () => {
   console.log('Getting all notes');
 };
 
+let readNotes = (title) => {
+  console.log('Read all the notes', title);
+};
+
+let removeNotes = (title) => {
+  console.log('Notes are removed', title);
+}
+
 module.exports = {
-  addNote
+  addNote,
+  getALl,
+  readNotes,
+  removeNotes
 };

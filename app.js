@@ -9,11 +9,11 @@ const notes = require('./notes.js');
 
 
 const argv = yargs.argv;
-let command = process.argv[2];
+let command = argv._[0];
 // console.log('Command: ', command);
 // console.log('Process', process.argv);
-// console.log('Yargs', argv);
-// console.log(process.argv);
+console.log('Yargs', argv);
+console.log(process.argv);
 
 if (command === 'add') {
   // console.log('Adding new note');
@@ -22,9 +22,10 @@ if (command === 'add') {
   // console.log('Adding list!');
   notes.getALl();
 } else if (command === 'read') {
-  console.log('Read all!');
+  notes.readNotes(argv.title);
 } else if (command === 'remove') {
-  console.log('Removing list!');
+  // console.log('Removing list!');
+  notes.removeNotes(argv.title);
 } else {
   console.log('Command not recognized');
 }

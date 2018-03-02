@@ -44,7 +44,13 @@ let readNotes = (title) => {
 };
 
 let removeNotes = (title) => {
-  console.log('Notes are removed', title);
+  // console.log('Notes are removed', title);
+  //Ftech Notes
+  let notes = fetchNotes();
+  // filter notes, removing the one with the Title
+  let filteredNotes = notes.filter((note) => note.title !== title);
+  // save new notes array
+  saveNotes(filteredNotes);
 }
 
 module.exports = {

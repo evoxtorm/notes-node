@@ -20,9 +20,7 @@ if (command === 'add') {
   note = notes.addNote(argv.title, argv.body);
   if (note) {
     console.log("Note created");
-    console.log("--");
-    console.log(`Title  ${note.title}`);
-    console.log(`Title  ${note.body}`);
+    notes.logNote(note);
   } else {
     console.log("Notes already taken");
   }
@@ -33,9 +31,7 @@ if (command === 'add') {
   let note = notes.readNotes(argv.title);
   if (note) {
     console.log('Note found');
-    console.log("--");
-    console.log(`Title  ${note.title}`);
-    console.log(`Title  ${note.body}`);
+    notes.logNote(note);
   } else {
     console.log('Note not found');
   }

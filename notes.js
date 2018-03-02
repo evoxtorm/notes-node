@@ -51,6 +51,8 @@ let removeNotes = (title) => {
   let filteredNotes = notes.filter((note) => note.title !== title);
   // save new notes array
   saveNotes(filteredNotes);
+
+  return notes.length !== filteredNotes.length;
 }
 
 module.exports = {

@@ -40,7 +40,10 @@ let getALl = () => {
 };
 
 let readNotes = (title) => {
-  console.log('Read all the notes', title);
+  // console.log('Read all the notes', title);
+  let notes = fetchNotes();
+  let filteredNotes = notes.filter((note) => note.title === title);
+  return filteredNotes[0];
 };
 
 let removeNotes = (title) => {

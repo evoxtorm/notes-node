@@ -1,4 +1,4 @@
-console.log("Starting notes.js");
+//console.log("Starting notes.js");
 
 const fs = require('fs');
 
@@ -36,7 +36,8 @@ if (duplicateNotes.length === 0) {
 };
 
 let getALl = () => {
-  console.log('Getting all notes');
+  // console.log('Getting all notes');
+  return fetchNotes();
 };
 
 let readNotes = (title) => {
@@ -62,8 +63,8 @@ let removeNotes = (title) => {
 var logNote = (note) => {
   debugger;
   console.log("--");
-  console.log(`Title  ${note.title}`);
-  console.log(`Body  ${note.body}`);
+  console.log(`Title:  ${note.title}`);
+  console.log(`Body:  ${note.body}`);
 };
 
 
